@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 
 
-function Record({ allrecorddata, btnclick }) {
+function Record({ allrecorddata, btnclick, setAllRecord }) {
 
   const category = ["mobile", "electronics", "cloth", "food", "all"];
+
   return (
     <center>
       <h1>All Record</h1>
@@ -20,7 +21,7 @@ function Record({ allrecorddata, btnclick }) {
           <tr key={1}  >
             <th>Id</th>
             <th>Name</th>
-            <th>Images</th>
+            <th style={{ paddingLeft: "70px" }}>Images</th>
             <th>Price</th>
             <th>Qty</th>
             <th>Category</th>
@@ -42,8 +43,8 @@ function Record({ allrecorddata, btnclick }) {
             })
           }
         </tbody>
-      </table>
-    </center>
+      </table >
+    </center >
   )
 }
 export default Record
